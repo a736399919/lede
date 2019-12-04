@@ -10,15 +10,16 @@
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: 0 20 * * *
-  # push:
+  watch:
+  #schedule:
+  #  - cron: 0 20 * * *
+  ## push:
   #   branches: 
   #     - master
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-16.04]
 
     steps:
       - name: Checkout
